@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+$blue: #3d6aa2
+$red: #cc3232
+$green: #526f35
+$bg: lighten(#d2b48c,20%)
+
+*
+  box-sizing: border-box
+
+html
+  height: 100%
+
+body
+  min-height: 100%
+  padding-bottom: 54px
+  position: relative
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  background: $bg
+  color: #333
+
+h1,
+h2,
+h3
+  font-family: Impact, Charcoal, sans-serif
+
+.flash_notice
+  font-weight: bold
+  text-align: center
+  color: $red
+  background: #fff
+  padding: 30px
+  border: 1px solid $blue
+  margin: 20px
+
+.layout-wrap
+  max-width: 900px
+  margin: 0 auto
+  padding: 0 30px
+  position: relative
+  background: #fff
+
+.mod-tasks
+  padding: 50px 25px
+
+  h1,
+  h2,
+  h3
+    margin-bottom: 25px
+    font-size: 36px
+    color: $blue
+    text-shadow: 1px 1px rgba(#000,.2)
+
+  h2
+    margin-top: 20px
+    font-size: 25px
+
+  h3
+    margin-top: 15px
+    font-size: 20px
+
+  p,
+  li
+    font-size: 14px
+    line-height: 1.5
+    margin-bottom: 10px
+
+  li
+    list-style: disc inside none
+
+  b
+    display: inline-block
+    width: 100px
+
+  table
+    width: 100%
+    margin-bottom: 25px
+    text-align: left
+
+  th,
+  td
+    padding: 5px 10px
+    border: 1px solid rgba($blue,.3)
+
+  th
+    font-weight: bold
+    color: $blue
+
+  td
+    font-size: 14px
+
+  .info
+    margin-bottom: 25px
+
+  label
+    width: 100px
+    display: inline-block
+
+  input
+    height: 30px
+
+  input[type="submit"],
+  .button
+    height: 30px
+    margin: 20px 0 0
+    padding: 0 10px
+    color: #fff !important
+    font-size: 14px
+    display: inline-block
+    text-decoration: none
+    line-height: 30px
+    background: $blue
+    border: none
+    -webkit-appearance: none
+    border-radius: 5px
+
+    &.small
+      height: 22px
+      padding: 0 6px
+      line-height: 22px
+
+    &:hover
+      background: darken($blue,10%)
+
+    &.red
+      background: $red
+
+      &:hover
+        background: darken($red,10%)
+
+  pre
+    display: inline-block
+    margin-bottom: 10px
+    padding: 5px 10px
+    color: #f5f5f5
+    font-size: 12px
+    background: #333
+    border-radius: 3px
+    font-family: Monaco, monospace
+
+  strong
+    font-weight: bold
+    font-size: 18px

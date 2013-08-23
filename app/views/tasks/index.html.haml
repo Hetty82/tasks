@@ -1,10 +1,13 @@
-%h1 Tasks
+.layout-wrap.mod-tasks
+  %h1 Tasks
 
-%ul
-  - for task in @tasks
-    %li= task.task
+  %ul
+    - for task in @tasks
+      %li{:id => task.id}
+        = task.task
+        |
+        = link_to 'edit', edit_task_path(task), class: 'button small'
+        |
+        = link_to 'delete', task, method: 'delete', class: 'button small red'
 
-= form_for @task do |f|
-  = f.label :task
-  = f.text_field :task
-  = f.submit
+  = render 'form'

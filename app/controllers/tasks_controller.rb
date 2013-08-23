@@ -10,6 +10,24 @@ class TasksController < ApplicationController
     redirect_to :back
   end
 
+  def edit
+    @task = Task.find params[:id]
+  end
+
+  def update
+    task = Task.find params[:id]
+    if task.update_attributes (task_params)
+      redirect_to tasks_path, :notice => 'Your task has been successfully been updated.'
+    else
+      redirect_to :back, :notice => 'There was an error updating your task. Field can not be emtpy.'
+    end
+  end
+
+  def destroy
+    Task.destroy params[:id]
+    redirect_to :back
+  end
+
   private
 
   def task_params
